@@ -1,0 +1,15 @@
+import torch
+ENV_ID = "Acrobot-v1"
+SEED = 0
+TOTAL_STEPS = 220_000
+GAMMA = 0.99
+N_STEP = 3
+LR = 1e-3
+BATCH_SIZE = 256
+REPLAY_SIZE = 200_000
+START_LEARN = 5_000
+EPS_START, EPS_END, EPS_DECAY_STEPS = 1.0, 0.05, 100_000
+TARGET_UPDATE_EVERY = 1_000
+GRAD_CLIP = 5.0
+EVAL_EVERY = 10_000
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
